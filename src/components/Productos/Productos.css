@@ -1,0 +1,18 @@
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 90%;
+}
+
+@media (width>=768px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
