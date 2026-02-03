@@ -25,8 +25,17 @@ class App extends Component {
     carro: [],
   };
   render() {
-    const agregarAlCarrito = () => {
-      console.log("Hola");
+    const agregarAlCarrito = (producto) => {
+      const carritoActual = this.state.carro;
+      const productoEstaEnCarrito = carritoActual.some(
+        (productoCarrito) => productoCarrito.nombre === producto.nombre
+      );
+      let nuevoCarro;
+      if (!productoEstaEnCarrito) {
+        nuevoCarro = [...this.state.carro, { ...producto, cantidad: 1 }];
+        this.setState({ carro: nuevoCarro });
+      }
+      console.log(this.state.carro);
     };
 
     const sacarDelCarrito = () => {
@@ -35,8 +44,8 @@ class App extends Component {
     return (
       <div>
         <Productos
-          agregarAlCarrito={() => agregarAlCarrito}
-          sacarDelCarrito={() => sacarDelCarrito}
+          agregarAlCarrito={agregarAlCarrito}
+          sacarDelCarrito={sacarDelCarrito}
           productos={this.state.productos}
         ></Productos>
       </div>

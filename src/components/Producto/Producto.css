@@ -1,3 +1,27 @@
+.producto {
+    padding: 2rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto__imagen {
+    width: 100%;
+}
+
+.producto__nombre {
+    font-size: 3rem;
+}
+
+.producto__precio {
+    font-size: 1.5rem;
+}
+
+.producto__precio--bold {
+    font-weight: bold;
+}
+
 .boton {
     border-radius: 5px;
     padding: 1rem 2rem;
@@ -17,22 +41,4 @@
 .boton__agregar:hover {
     background-color: #228e3c;
 
-}
-
-.producto {
-    padding: 1rem;
-    border: 1px solid #e1e1e1;
-    border-radius: 5px;
-}
-
-.producto__nombre {
-    font-size: 3rem;
-}
-
-.producto__precio {
-    font-size: 1.5rem;
-}
-
-.producto__precio--bold {
-    font-weight: bold;
 }
