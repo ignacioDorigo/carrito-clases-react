@@ -1,0 +1,38 @@
+.boton {
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.boton__agregar {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%;
+}
+
+.boton__agregar:hover {
+    background-color: #228e3c;
+
+}
+
+.producto {
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+.producto__nombre {
+    font-size: 3rem;
+}
+
+.producto__precio {
+    font-size: 1.5rem;
+}
+
+.producto__precio--bold {
+    font-weight: bold;
+}
