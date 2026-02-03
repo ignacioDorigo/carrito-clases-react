@@ -21,24 +21,3 @@
 .producto__precio--bold {
     font-weight: bold;
 }
-
-.boton {
-    border-radius: 5px;
-    padding: 1rem 2rem;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-
-.boton__agregar {
-    background-color: #28a745;
-    color: #fff;
-    width: 100%;
-}
-
-.boton__agregar:hover {
-    background-color: #228e3c;
-
-}
