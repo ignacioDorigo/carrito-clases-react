@@ -5,7 +5,7 @@ import Boton from "../Boton";
 
 class Producto extends Component {
     render() {
-        const { producto, agregarAlCarrito, sacarDelCarrito } = this.props;
+        const { producto, agregarAlCarrito } = this.props;
         return <div className="producto">
             <img className="producto__imagen" src={`${producto.urlImagen}`} alt={`Foto de ${producto.nombre}`}></img>
             <h2 className="producto__nombre">{producto.nombre}</h2>
