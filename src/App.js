@@ -3,6 +3,7 @@ import "./box-model.css";
 import "./normalize.css";
 import Productos from "./components/Productos";
 import Layout from "./components/Layout";
+import Titulo from "./components/Titulo/Titulo";
 
 class App extends Component {
   state = {
@@ -21,6 +22,11 @@ class App extends Component {
         nombre: "Arbejas",
         precio: 1500,
         urlImagen: "/imagenes/arbejas.webp",
+      },
+      {
+        nombre: "Lechuga",
+        precio: 1500,
+        urlImagen: "/imagenes/lechuga.webp",
       },
     ],
     carro: [],
@@ -43,13 +49,16 @@ class App extends Component {
       console.log("Hola");
     };
     return (
-      <Layout>
-        <Productos
-          agregarAlCarrito={agregarAlCarrito}
-          sacarDelCarrito={sacarDelCarrito}
-          productos={this.state.productos}
-        ></Productos>
-      </Layout>
+      <>
+        <Layout>
+          <Titulo>Tienda</Titulo>
+          <Productos
+            agregarAlCarrito={agregarAlCarrito}
+            sacarDelCarrito={sacarDelCarrito}
+            productos={this.state.productos}
+          ></Productos>
+        </Layout>
+      </>
     );
   }
 }

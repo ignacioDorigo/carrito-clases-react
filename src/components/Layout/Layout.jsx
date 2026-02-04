@@ -4,7 +4,7 @@ import "./Layout.css";
 class Layout extends Component {
     render() {
         const { children } = this.props;
-        return <div className="contenedor">{children}</div>
+        return <div className="layout contenedor">{children}</div>
     }
 }
 
