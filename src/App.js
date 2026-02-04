@@ -25,9 +25,9 @@ class App extends Component {
         urlImagen: "/imagenes/arbejas.webp",
       },
       {
-        nombre: "Lechuga",
+        nombre: "Banana",
         precio: 1500,
-        urlImagen: "/imagenes/lechuga.webp",
+        urlImagen: "/imagenes/banana.webp",
       },
     ],
     carro: [],

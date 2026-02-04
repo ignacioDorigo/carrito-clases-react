@@ -1,2 +1,2 @@
-export { default } from "./Carro.jsx";
+export { default } from "./Carro";
 
