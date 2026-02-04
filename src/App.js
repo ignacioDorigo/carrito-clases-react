@@ -4,6 +4,7 @@ import "./normalize.css";
 import Productos from "./components/Productos";
 import Layout from "./components/Layout";
 import Titulo from "./components/Titulo/Titulo";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {
@@ -50,6 +51,7 @@ class App extends Component {
     };
     return (
       <>
+        <Navbar></Navbar>
         <Layout>
           <Titulo>Tienda</Titulo>
           <Productos
