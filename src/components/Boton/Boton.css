@@ -1,6 +1,6 @@
 .boton {
     border-radius: 5px;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -9,12 +9,13 @@
 }
 
 .boton__agregar {
-    background-color: #28a745;
+    
+    background-color: #124265;
     color: #fff;
     width: 100%;
 }
 
 .boton__agregar:hover {
-    background-color: #228e3c;
+    background-color: #0A283E;
 
 }

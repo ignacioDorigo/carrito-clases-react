@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./box-model.css";
 import "./normalize.css";
 import Productos from "./components/Productos";
+import Layout from "./components/Layout";
 
 class App extends Component {
   state = {
@@ -28,7 +29,7 @@ class App extends Component {
     const agregarAlCarrito = (producto) => {
       const carritoActual = this.state.carro;
       const productoEstaEnCarrito = carritoActual.some(
-        (productoCarrito) => productoCarrito.nombre === producto.nombre
+        (productoCarrito) => productoCarrito.nombre === producto.nombre,
       );
       let nuevoCarro;
       if (!productoEstaEnCarrito) {
@@ -42,13 +43,13 @@ class App extends Component {
       console.log("Hola");
     };
     return (
-      <div>
+      <Layout>
         <Productos
           agregarAlCarrito={agregarAlCarrito}
           sacarDelCarrito={sacarDelCarrito}
           productos={this.state.productos}
         ></Productos>
-      </div>
+      </Layout>
     );
   }
 }
