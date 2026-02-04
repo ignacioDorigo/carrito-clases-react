@@ -5,6 +5,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    color: #0A283E;
+}
+
 *,
 *:before,
 *:after {

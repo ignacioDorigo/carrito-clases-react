@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./box-model.css";
 import "./normalize.css";
 import Productos from "./components/Productos";
+import Layout from "./components/Layout";
+import Titulo from "./components/Titulo/Titulo";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {
@@ -21,6 +24,11 @@ class App extends Component {
         precio: 1500,
         urlImagen: "/imagenes/arbejas.webp",
       },
+      {
+        nombre: "Lechuga",
+        precio: 1500,
+        urlImagen: "/imagenes/lechuga.webp",
+      },
     ],
     carro: [],
   };
@@ -28,7 +36,7 @@ class App extends Component {
     const agregarAlCarrito = (producto) => {
       const carritoActual = this.state.carro;
       const productoEstaEnCarrito = carritoActual.some(
-        (productoCarrito) => productoCarrito.nombre === producto.nombre
+        (productoCarrito) => productoCarrito.nombre === producto.nombre,
       );
       let nuevoCarro;
       if (!productoEstaEnCarrito) {
@@ -42,13 +50,17 @@ class App extends Component {
       console.log("Hola");
     };
     return (
-      <div>
-        <Productos
-          agregarAlCarrito={agregarAlCarrito}
-          sacarDelCarrito={sacarDelCarrito}
-          productos={this.state.productos}
-        ></Productos>
-      </div>
+      <>
+        <Navbar></Navbar>
+        <Layout>
+          <Titulo>Tienda</Titulo>
+          <Productos
+            agregarAlCarrito={agregarAlCarrito}
+            sacarDelCarrito={sacarDelCarrito}
+            productos={this.state.productos}
+          ></Productos>
+        </Layout>
+      </>
     );
   }
 }
