@@ -7,11 +7,14 @@ export default class DetallesProductos extends Component {
   render() {
     const { carro } = this.props;
     return (
-      <ul className="detallesProducto">
-        {carro.map((producto, index) => (
-          <DetalleProducto key={index} producto={producto}></DetalleProducto>
-        ))}
-      </ul>
+      <>
+        <ul className="detallesProducto">
+          {carro.map((producto, index) => (
+            <DetalleProducto key={index} producto={producto}></DetalleProducto>
+          ))}
+        </ul>
+        <div className="s"></div>
+      </>
     );
   }
 }
