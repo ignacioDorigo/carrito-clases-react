@@ -3,6 +3,7 @@
     border-bottom: 1px solid #e1e1e1;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     /* display: grid;
     grid-template-columns: inherit; */
     /* Cada elemento se ocupa una fila */
@@ -12,7 +13,8 @@
 }
 
 .detalle__producto img {
-    max-width: 5rem;
+    /* max-width: 5rem; */
+    width: 30%;
 }
 
 .detalle__producto--precio {
@@ -23,8 +25,21 @@
     text-align: center;
 }
 
-@media (width>=768px){
-    .detalle__producto p{
+@media (width>=768px) {
+    .detalle__producto p {
         font-size: 1.5rem;
     }
+}
+
+.boton-eliminar {
+    color: #FFF;
+    background-color: #fa5758;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.boton-eliminar:hover {
+    background-color: #b84040;
 }
