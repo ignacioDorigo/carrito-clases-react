@@ -1,0 +1,26 @@
+.detalle__producto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 40rem;
+    padding: 2rem;
+    background-color: #FFF;
+    border-bottom: 1px solid #E1E1E1;
+    place-items: center;
+}
+
+.detalle__producto:first-of-type {
+    border-top: 1px solid #e1e1e1;
+    /* borra */
+}
+
+.detalle__producto:last-of-type {
+    border-bottom: none
+}
+
+.detalle__producto img {
+    width: 100%;
+}
+
+.detalle__producto p {
+    font-size: 1.5rem;
+}

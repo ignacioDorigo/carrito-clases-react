@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "./Carro.css";
 import SvgCarrito from '../SvgCarrito';
 import BubbleAlert from '../BubbleAlert/BubbleAlert';
+import DetallesProductos from '../DetallesProductos/DetallesProductos';
 
 export default class Carro extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class Carro extends Component {
         return (
             <div className='carro'>
                 <SvgCarrito></SvgCarrito>
-                {carroVisible ? null : <BubbleAlert carro={carro}></BubbleAlert>}
+                {carroVisible ? <DetallesProductos carro={carro} /> : <BubbleAlert carro={carro}></BubbleAlert>}
 
             </div>
         )

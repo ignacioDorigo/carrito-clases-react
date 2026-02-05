@@ -31,7 +31,7 @@ class App extends Component {
       },
     ],
     carro: [],
-    carroVisible: false,
+    carroVisible: true,
   };
 
   agregarAlCarrito = (producto) => {
