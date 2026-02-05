@@ -7,8 +7,8 @@ export default class Navbar extends Component {
     render() {
         const { carro, carroVisible, mostrarOcultarCarrito, total, eliminarProducto } = this.props;
         return (
-            <div className=''>
-                <nav className='nav'>
+            <div className='nav-bg'>
+                <nav className='nav contenedor'>
                     <Logo></Logo>
                     <Carro carro={carro} carroVisible={carroVisible} mostrarOcultarCarrito={mostrarOcultarCarrito} total={total} eliminarProducto={eliminarProducto}></Carro>
                 </nav>
