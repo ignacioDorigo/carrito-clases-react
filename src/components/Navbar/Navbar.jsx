@@ -5,11 +5,11 @@ import Carro from '../Carro'
 
 export default class Navbar extends Component {
     render() {
-        const { carro, carroVisible, mostrarOcultarCarrito } = this.props;
+        const { carro, carroVisible, mostrarOcultarCarrito, total } = this.props;
         return (
             <nav className='nav'>
                 <Logo></Logo>
-                <Carro carro={carro} carroVisible={carroVisible} mostrarOcultarCarrito={mostrarOcultarCarrito}></Carro>
+                <Carro carro={carro} carroVisible={carroVisible} mostrarOcultarCarrito={mostrarOcultarCarrito} total={total}></Carro>
             </nav>
         )
     }

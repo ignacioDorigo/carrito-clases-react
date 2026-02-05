@@ -10,11 +10,33 @@
     box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
 
     /* Lo que me agrego GPT */
-    display: grid;
-    grid-template-columns: 70px 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 70px 1fr 1fr 1fr; */
 
     /* Si yo no le pongo un ancho al contenedor, entonces todas las filas van a tomar un ancho distinto */
     /* Las columnas de grid se pueden heredar */
-    min-width: 25rem;
+    /* min-width: 25rem; */
 
+
+    /* Prubea */
+    display: flex;
+    flex-direction: column;
+    min-width: 25rem;
+}
+
+@media (width>=768px) {
+    .detallesProducto {
+        min-width: 40rem;
+    }
+}
+
+.detalle_total_pagar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.detalle_total_pagar p {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
