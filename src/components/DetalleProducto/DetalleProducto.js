@@ -7,8 +7,9 @@ export default class DetalleProducto extends Component {
     return (
       <li className="detalle__producto">
         <img src={producto.urlImagen} alt={`${producto.nombre}`}></img>
-        <p>{producto.nombre}</p>
-        <p>{producto.cantidad}</p>
+        <p className="detalle__producto--precio">{producto.nombre}</p>
+        <p>{producto.cantidad} Kg</p>
+        <p>${producto.precio * producto.cantidad}</p>
       </li>
     );
   }

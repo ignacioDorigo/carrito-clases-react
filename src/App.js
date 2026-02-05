@@ -31,7 +31,7 @@ class App extends Component {
       },
     ],
     carro: [],
-    carroVisible: true,
+    carroVisible: false,
   };
 
   agregarAlCarrito = (producto) => {
@@ -111,6 +111,7 @@ class App extends Component {
         <Navbar
           carro={this.state.carro}
           carroVisible={this.state.carroVisible}
+          mostrarOcultarCarrito={this.mostrarOcultarCarrito}
         ></Navbar>
         <Layout>
           <Titulo>Tienda</Titulo>
