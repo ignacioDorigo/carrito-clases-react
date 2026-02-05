@@ -67,6 +67,15 @@ class App extends Component {
       };
     });
   };
+
+  calcularTotal = () => {
+    const carritoActual = this.state.carro;
+    const total = carritoActual.reduce(
+      (acum, producto) => acum + producto.precio * producto.cantidad,
+      0,
+    );
+    return total;
+  };
   render() {
     // const agregarAlCarrito = (producto) => {
     //   // Vamos a tomar el estado actual del carrito
@@ -112,6 +121,7 @@ class App extends Component {
           carro={this.state.carro}
           carroVisible={this.state.carroVisible}
           mostrarOcultarCarrito={this.mostrarOcultarCarrito}
+          total={this.calcularTotal}
         ></Navbar>
         <Layout>
           <Titulo>Tienda</Titulo>
