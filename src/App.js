@@ -46,9 +46,10 @@ class App extends Component {
       console.log(this.state.carro);
     };
 
-    const sacarDelCarrito = () => {
-      console.log("Hola");
-    };
+    // Usar despues en el detalleCompra
+    // const sacarDelCarrito = () => {
+    //   console.log("Hola");
+    // };
     return (
       <>
         <Navbar></Navbar>
@@ -56,7 +57,6 @@ class App extends Component {
           <Titulo>Tienda</Titulo>
           <Productos
             agregarAlCarrito={agregarAlCarrito}
-            sacarDelCarrito={sacarDelCarrito}
             productos={this.state.productos}
           ></Productos>
         </Layout>

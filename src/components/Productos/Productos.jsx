@@ -4,10 +4,10 @@ import "./Productos.css";
 
 class Productos extends Component {
     render() {
-        const { productos, agregarAlCarrito, sacarDelCarrito } = this.props;
+        const { productos, agregarAlCarrito } = this.props;
         return <div className="productos"> 
             {productos.map((producto, index) =>
-                (<Producto key={index} producto={producto} agregarAlCarrito={agregarAlCarrito} sacarDelCarrito={sacarDelCarrito}></Producto>)
+                (<Producto key={index} producto={producto} agregarAlCarrito={agregarAlCarrito}></Producto>)
             )}
         </div>
     }
