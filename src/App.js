@@ -34,16 +34,30 @@ class App extends Component {
   };
   render() {
     const agregarAlCarrito = (producto) => {
+      // Vamos a tomar el estado actual del carrito
       const carritoActual = this.state.carro;
+
+      // Esto me devuelve un boolean, que verifica si el producto que le pasamos como parametro ya esta en el carrito.
       const productoEstaEnCarrito = carritoActual.some(
         (productoCarrito) => productoCarrito.nombre === producto.nombre,
       );
+
+      // Vamos a crear un nuevo carro, que vamos a usar para setear el estado.
       let nuevoCarro;
       if (!productoEstaEnCarrito) {
+        // En caso de que no este agregado, vamos a crear un objeto de ese producto con cantidad 1, y copiar los otros productos que ya estaban en el carrito
         nuevoCarro = [...this.state.carro, { ...producto, cantidad: 1 }];
-        this.setState({ carro: nuevoCarro });
+
+      } else {
+        // En caso de que ese producto ya exista, vamos a sumarle uno a la cantidad, y con los otros productos solo los vamos a copiar.
+        nuevoCarro = carritoActual.map((productoEnCarrito) =>
+          productoEnCarrito.nombre === producto.nombre
+            ? { ...producto, cantidad: productoEnCarrito.cantidad + 1 }
+            : productoEnCarrito,
+        );
       }
-      console.log(this.state.carro);
+      this.setState({ carro: nuevoCarro });
+      // console.log(this.state.carro);
     };
 
     // Usar despues en el detalleCompra
@@ -52,7 +66,7 @@ class App extends Component {
     // };
     return (
       <>
-        <Navbar></Navbar>
+        <Navbar carro={this.state.carro}></Navbar>
         <Layout>
           <Titulo>Tienda</Titulo>
           <Productos
