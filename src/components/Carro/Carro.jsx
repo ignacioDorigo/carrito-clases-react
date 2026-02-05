@@ -6,12 +6,11 @@ import DetallesProductos from '../DetallesProductos/DetallesProductos';
 
 export default class Carro extends Component {
     render() {
-        const { carro, carroVisible, mostrarOcultarCarrito, total } = this.props;
-        console.log(this.props)
+        const { carro, carroVisible, mostrarOcultarCarrito, total, eliminarProducto } = this.props;
         return (
             <div className='carro'>
                 <SvgCarrito mostrarOcultarCarrito={mostrarOcultarCarrito}></SvgCarrito>
-                {carroVisible ? <DetallesProductos carro={carro} total={total} /> : <BubbleAlert carro={carro}></BubbleAlert>}
+                {carroVisible ? <DetallesProductos carro={carro} total={total} eliminarProducto={eliminarProducto} /> : <BubbleAlert carro={carro}></BubbleAlert>}
 
             </div>
         )
