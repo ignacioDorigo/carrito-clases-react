@@ -5,11 +5,13 @@ import BubbleAlert from '../BubbleAlert/BubbleAlert';
 
 export default class Carro extends Component {
     render() {
-        const { carro } = this.props;
+        const { carro, carroVisible } = this.props;
+        console.log(this.props)
         return (
             <div className='carro'>
                 <SvgCarrito></SvgCarrito>
-                <BubbleAlert carro={carro}></BubbleAlert>
+                {carroVisible ? null : <BubbleAlert carro={carro}></BubbleAlert>}
+
             </div>
         )
     }
