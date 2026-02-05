@@ -31,6 +31,7 @@ class App extends Component {
       },
     ],
     carro: [],
+    carroVisible: false,
   };
   render() {
     const agregarAlCarrito = (producto) => {
@@ -47,7 +48,6 @@ class App extends Component {
       if (!productoEstaEnCarrito) {
         // En caso de que no este agregado, vamos a crear un objeto de ese producto con cantidad 1, y copiar los otros productos que ya estaban en el carrito
         nuevoCarro = [...this.state.carro, { ...producto, cantidad: 1 }];
-
       } else {
         // En caso de que ese producto ya exista, vamos a sumarle uno a la cantidad, y con los otros productos solo los vamos a copiar.
         nuevoCarro = carritoActual.map((productoEnCarrito) =>
