@@ -1,0 +1,16 @@
+.bubble {
+    position: absolute;
+    background-color: #f69102;
+    border-radius: 50%;
+    height:4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -2rem;
+    bottom: -3rem;
+    color: #FFF;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1.6rem;
+}

@@ -13,8 +13,6 @@ class Producto extends Component {
             <Boton className="boton boton__agregar" onClick={() => {
                 agregarAlCarrito(producto)
             }}>Agregar</Boton>
-
-
         </div>
     }
 }
