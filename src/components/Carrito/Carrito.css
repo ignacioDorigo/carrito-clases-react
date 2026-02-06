@@ -1,0 +1,63 @@
+.carrito {
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .carrito {
+        width: 40rem;
+        left: auto;
+    }
+}
+
+.div__carrito__titulo {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.carrito__titulo {
+    font-size: 2.4rem;
+}
+
+.carrito__boton__atras {
+    border: none;
+    background-color: #FFF;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    color: #0a283d;
+    top: 0;
+    right: 0;
+}
+
+.detalle__total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.detalle__total p {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.boton__pagar {
+    background-color: #0a283d;
+    color: #FFF;
+    transition: all .3s ease-in-out;
+}
+
+.boton__pagar:hover {
+    background-color: #071d2c;
+}

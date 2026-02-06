@@ -6,6 +6,8 @@ import Layout from "./components/Layout";
 import Titulo from "./components/Titulo/Titulo";
 import Navbar from "./components/Navbar";
 import Swal from "sweetalert2";
+import Overlay from "./components/Overlay/Overlay";
+import Carrito from "./components/Carrito/Carrito";
 
 class App extends Component {
   state = {
@@ -81,12 +83,11 @@ class App extends Component {
   eliminarProducto = (producto) => {
     Swal.fire({
       title: `Eliminar`,
-      text: `¿Seguro que quieres eliminar las ${producto.nombre} de su carrito?`,
+      text: `¿Seguro que quieres eliminar el producto de su carrito?`,
       showCancelButton: true,
-      cancelButtonText:"Cancelar",
+      cancelButtonText: "Cancelar",
       confirmButtonText: "Eliminar",
       confirmButtonColor: "#fa5758",
-
     }).then((result) => {
       if (result.isConfirmed) {
         const carrito = this.state.carro;
@@ -96,6 +97,22 @@ class App extends Component {
 
         this.setState({ carro: nuevoCarro });
         Swal.fire("Exito!", "Producto eliminado correctamente", "success");
+      }
+    });
+  };
+
+  confirmarCarrito = () => {
+    Swal.fire({
+      title: `Confirmar`,
+      text: `¿Está seguro de que quiere confirmar su carrito?`,
+      showCancelButton: true,
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Eliminar",
+      confirmButtonColor: "#6ad42d",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.setState({ carro: [] });
+        Swal.fire("Exito!", "Carrito confirmado", "success");
       }
     });
   };
@@ -116,6 +133,18 @@ class App extends Component {
             productos={this.state.productos}
           ></Productos>
         </Layout>
+        {this.state.carroVisible === false ? null : (
+          <Overlay>
+            <Carrito
+              mostrarOcultarCarrito={this.mostrarOcultarCarrito}
+              carro={this.state.carro}
+              carroVisible={this.state.carroVisible}
+              total={this.calcularTotal}
+              eliminarProducto={this.eliminarProducto}
+              confirmarCarrito={this.confirmarCarrito}
+            ></Carrito>
+          </Overlay>
+        )}
       </>
     );
   }

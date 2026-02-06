@@ -20,3 +20,11 @@ Práctica específica de la estructura de clases sin depender de Hooks:
 - **State Updates**: Uso correcto de `this.setState()` para disparar el re-renderizado.
 - **Event Binding**: Manejo de eventos y el contexto de la palabra reservada `this`.
 - **Render Method**: Estructura del método `render` y retorno de elementos.
+
+## 🎨 UI & UX Enhancements
+
+Implementación de mejoras visuales y de experiencia de usuario:
+
+- **SweetAlert2**: Uso de la dependencia para mostrar pop-ups personalizados (alertas, confirmaciones y feedback visual).
+- **User Feedback**: Confirmaciones visuales para acciones como eliminar productos o confirmar eventos.
+- **Experience**: Mejor experiencia de interacción mediante alertas modernas y claras.
