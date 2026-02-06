@@ -47,7 +47,17 @@
     padding: 1rem;
 }
 
-.detalle__total p{
+.detalle__total p {
     font-size: 1.7rem;
     font-weight: bold;
+}
+
+.boton__pagar {
+    background-color: #0a283d;
+    color: #FFF;
+    transition: all .3s ease-in-out;
+}
+
+.boton__pagar:hover {
+    background-color: #071d2c;
 }

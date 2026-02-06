@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import "./Carrito.css";
 import Detalles from "../Detalles/Detalles";
+import Boton from "../Boton";
 
 export default class Carrito extends Component {
   render() {
-    const { mostrarOcultarCarrito, carro, total, eliminarProducto } =
-      this.props;
+    const {
+      mostrarOcultarCarrito,
+      carro,
+      total,
+      eliminarProducto,
+      confirmarCarrito,
+    } = this.props;
 
     return (
       <div className="carrito">
@@ -24,6 +30,10 @@ export default class Carrito extends Component {
           <p>Total: </p>
           <p>${total()}</p>
         </div>
+
+        <Boton className="boton boton__pagar" onClick={confirmarCarrito}>
+          Confirmar Carrito
+        </Boton>
       </div>
     );
   }

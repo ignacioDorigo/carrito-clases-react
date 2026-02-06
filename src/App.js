@@ -100,6 +100,22 @@ class App extends Component {
       }
     });
   };
+
+  confirmarCarrito = () => {
+    Swal.fire({
+      title: `Confirmar`,
+      text: `¿Está seguro de que quiere confirmar su carrito?`,
+      showCancelButton: true,
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Eliminar",
+      confirmButtonColor: "#6ad42d",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.setState({ carro: [] });
+        Swal.fire("Exito!", "Carrito confirmado", "success");
+      }
+    });
+  };
   render() {
     return (
       <>
@@ -125,6 +141,7 @@ class App extends Component {
               carroVisible={this.state.carroVisible}
               total={this.calcularTotal}
               eliminarProducto={this.eliminarProducto}
+              confirmarCarrito={this.confirmarCarrito}
             ></Carrito>
           </Overlay>
         )}
