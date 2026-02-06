@@ -61,3 +61,7 @@
 .boton__pagar:hover {
     background-color: #071d2c;
 }
+
+.carrito-sin-productos {
+    text-align: center;
+}

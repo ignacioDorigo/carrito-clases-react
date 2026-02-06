@@ -26,14 +26,21 @@ export default class Carrito extends Component {
         </div>
 
         <Detalles carro={carro} eliminarProducto={eliminarProducto}></Detalles>
-        <div className="detalle__total">
-          <p>Total: </p>
-          <p>${total()}</p>
-        </div>
 
-        <Boton className="boton boton__pagar" onClick={confirmarCarrito}>
-          Confirmar Carrito
-        </Boton>
+        {carro.length === 0 ? (
+          <h3 className="carrito-sin-productos">No hay productos en tu carrito</h3>
+        ) : (
+          <div className="detalle__total">
+            <p>Total: </p>
+            <p>${total()}</p>
+          </div>
+        )}
+
+        {carro.length === 0 ? null : (
+          <Boton className="boton boton__pagar" onClick={confirmarCarrito}>
+            Confirmar Carrito
+          </Boton>
+        )}
       </div>
     );
   }
