@@ -83,7 +83,7 @@ class App extends Component {
   eliminarProducto = (producto) => {
     Swal.fire({
       title: `Eliminar`,
-      text: `¿Seguro que quieres eliminar las ${producto.nombre} de su carrito?`,
+      text: `¿Seguro que quieres eliminar el producto de su carrito?`,
       showCancelButton: true,
       cancelButtonText: "Cancelar",
       confirmButtonText: "Eliminar",

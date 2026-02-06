@@ -1,0 +1,48 @@
+.detalle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.detalle__img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.detalle__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detalle__nombre {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.detalle__cantidad {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.detalle__precio {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.detalle__btn__eliminar {
+  stroke: #f34f4f;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
