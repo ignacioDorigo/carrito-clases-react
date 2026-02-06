@@ -39,3 +39,15 @@
     top: 0;
     right: 0;
 }
+
+.detalle__total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.detalle__total p{
+    font-size: 1.7rem;
+    font-weight: bold;
+}

@@ -20,6 +20,10 @@ export default class Carrito extends Component {
         </div>
 
         <Detalles carro={carro} eliminarProducto={eliminarProducto}></Detalles>
+        <div className="detalle__total">
+          <p>Total: </p>
+          <p>${total()}</p>
+        </div>
       </div>
     );
   }
